@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://bctnvi6mo7jq7"]
+
+[ext_resource type="Texture2D" uid="uid://tcmmm3ibvk5o" path="res://assets/1/craftpix-net-396765-free-simple-platformer-game-kit-pixel-art/3 Objects/Checkpoints/Checkpoint_Flag_Idle2.png" id="1_76ss4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32e5v"]
+atlas = ExtResource("1_76ss4")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q38m2"]
+atlas = ExtResource("1_76ss4")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjkec"]
+atlas = ExtResource("1_76ss4")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5mf2"]
+atlas = ExtResource("1_76ss4")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kq5u"]
+atlas = ExtResource("1_76ss4")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msxbw"]
+atlas = ExtResource("1_76ss4")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjvi2"]
+atlas = ExtResource("1_76ss4")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_df0v8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32e5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q38m2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjkec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5mf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kq5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msxbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjvi2")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_df0v8")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.90861773

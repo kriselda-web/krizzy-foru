@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8uwai0hskbkv"]
+
+[ext_resource type="Texture2D" uid="uid://cbxi3t2v5oh1x" path="res://assets/1/craftpix-net-396765-free-simple-platformer-game-kit-pixel-art/3 Objects/Checkpoints/Pointer_Static.png" id="1_umosx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23jat"]
+atlas = ExtResource("1_umosx")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q8ifc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23jat")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_q8ifc")
