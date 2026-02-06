@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://uowf74bptas8"]
+
+[ext_resource type="Script" uid="uid://bt2big86g3irc" path="res://scenes/lives.gd" id="1_naohr"]
+[ext_resource type="Texture2D" uid="uid://ct05vvkryq4i5" path="res://scenes/heart.png" id="2_h857v"]
+
+[node name="Lives" type="Node2D"]
+script = ExtResource("1_naohr")
+
+[node name="Live1" type="Sprite2D" parent="."]
+position = Vector2(16, -80)
+scale = Vector2(0.031249998, 0.031250007)
+texture = ExtResource("2_h857v")
+
+[node name="Live2" type="Sprite2D" parent="."]
+position = Vector2(31.999998, -80)
+scale = Vector2(0.031250007, 0.031250007)
+texture = ExtResource("2_h857v")
+
+[node name="Live3" type="Sprite2D" parent="."]
+position = Vector2(48, -80)
+scale = Vector2(0.031250015, 0.031249994)
+texture = ExtResource("2_h857v")
