@@ -12,11 +12,11 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	update_lives()
 
-func update_lives() -> void:
+func update_lives():
 	life3.visible = Livescounter.lives >= 3
-	life2.visible = Livescounter.lives >= 26
+	life2.visible = Livescounter.lives >= 2
 	life1.visible = Livescounter.lives >= 1
-
+	
 	if Livescounter.lives <= 0 and not game_over_triggered:
 		game_over_triggered = true
 		get_tree().change_scene_to_file("res://game_over.tscn")
