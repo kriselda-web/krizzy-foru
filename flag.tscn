@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://rg3m1ru3samq"]
+
+[ext_resource type="Texture2D" uid="uid://c4c2pfnm1gdwl" path="res://assets/1/craftpix-net-396765-free-simple-platformer-game-kit-pixel-art/3 Objects/Checkpoints/Checkpoint_Flag_Out2.png" id="1_l1sgl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1sgl"]
+size = Vector2(10, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amn8n"]
+atlas = ExtResource("1_l1sgl")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukulb"]
+atlas = ExtResource("1_l1sgl")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ts4f7"]
+atlas = ExtResource("1_l1sgl")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7xjy"]
+atlas = ExtResource("1_l1sgl")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcbnv"]
+atlas = ExtResource("1_l1sgl")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rssqg"]
+atlas = ExtResource("1_l1sgl")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esaoi"]
+atlas = ExtResource("1_l1sgl")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uwdpu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amn8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukulb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ts4f7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7xjy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcbnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rssqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esaoi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="Flag" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_l1sgl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_uwdpu")
+autoplay = "default"
+frame_progress = 0.42162168

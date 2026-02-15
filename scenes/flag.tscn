@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bctnvi6mo7jq7"]
+[gd_scene load_steps=11 format=3 uid="uid://bctnvi6mo7jq7"]
 
 [ext_resource type="Texture2D" uid="uid://tcmmm3ibvk5o" path="res://assets/1/craftpix-net-396765-free-simple-platformer-game-kit-pixel-art/3 Objects/Checkpoints/Checkpoint_Flag_Idle2.png" id="1_76ss4"]
 
@@ -56,8 +56,11 @@ animations = [{
 }],
 "loop": true,
 "name": &"new_animation",
-"speed": 5.0
+"speed": 17.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76ss4"]
+size = Vector2(12, 46)
 
 [node name="Area2D" type="Area2D"]
 
@@ -65,4 +68,8 @@ animations = [{
 sprite_frames = SubResource("SpriteFrames_df0v8")
 animation = &"new_animation"
 autoplay = "new_animation"
-frame_progress = 0.90861773
+frame_progress = 0.31042346
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_76ss4")
